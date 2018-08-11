@@ -3,4 +3,4 @@
 
 import Foundation
 
-typealias Callback<T> = (T) -> ()
+public typealias Callback<T> = (T) -> ()
