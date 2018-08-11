@@ -10,6 +10,8 @@
 		E93B3B1B211E805E004CBF13 /* EpicappToolkit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E93B3B11211E805E004CBF13 /* EpicappToolkit.framework */; };
 		E93B3B20211E805E004CBF13 /* EpicappToolkitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93B3B1F211E805E004CBF13 /* EpicappToolkitTests.swift */; };
 		E93B3B22211E805E004CBF13 /* EpicappToolkit.h in Headers */ = {isa = PBXBuildFile; fileRef = E93B3B14211E805E004CBF13 /* EpicappToolkit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E93B3B2D211E8310004CBF13 /* FileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93B3B2B211E8310004CBF13 /* FileStorage.swift */; };
+		E93B3B2E211E8310004CBF13 /* UserDefaultsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93B3B2C211E8310004CBF13 /* UserDefaultsStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		E93B3B1A211E805E004CBF13 /* EpicappToolkitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EpicappToolkitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E93B3B1F211E805E004CBF13 /* EpicappToolkitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpicappToolkitTests.swift; sourceTree = "<group>"; };
 		E93B3B21211E805E004CBF13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E93B3B2B211E8310004CBF13 /* FileStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileStorage.swift; sourceTree = "<group>"; };
+		E93B3B2C211E8310004CBF13 /* UserDefaultsStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				E93B3B14211E805E004CBF13 /* EpicappToolkit.h */,
+				E93B3B2B211E8310004CBF13 /* FileStorage.swift */,
+				E93B3B2C211E8310004CBF13 /* UserDefaultsStorage.swift */,
 				E93B3B15211E805E004CBF13 /* Info.plist */,
 			);
 			path = EpicappToolkit;
@@ -148,6 +154,7 @@
 				TargetAttributes = {
 					E93B3B10211E805E004CBF13 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 					E93B3B19211E805E004CBF13 = {
 						CreatedOnToolsVersion = 10.0;
@@ -194,6 +201,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E93B3B2E211E8310004CBF13 /* UserDefaultsStorage.swift in Sources */,
+				E93B3B2D211E8310004CBF13 /* FileStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +348,7 @@
 		E93B3B26211E805E004CBF13 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -356,6 +366,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.epicapp.EpicappToolkit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +375,7 @@
 		E93B3B27211E805E004CBF13 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -389,6 +401,7 @@
 		E93B3B29211E805E004CBF13 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A2V64Z853W;
 				INFOPLIST_FILE = EpicappToolkitTests/Info.plist;
@@ -407,6 +420,7 @@
 		E93B3B2A211E805E004CBF13 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A2V64Z853W;
 				INFOPLIST_FILE = EpicappToolkitTests/Info.plist;
