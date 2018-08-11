@@ -12,6 +12,8 @@
 		E93B3B22211E805E004CBF13 /* EpicappToolkit.h in Headers */ = {isa = PBXBuildFile; fileRef = E93B3B14211E805E004CBF13 /* EpicappToolkit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E93B3B2D211E8310004CBF13 /* FileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93B3B2B211E8310004CBF13 /* FileStorage.swift */; };
 		E93B3B2E211E8310004CBF13 /* UserDefaultsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93B3B2C211E8310004CBF13 /* UserDefaultsStorage.swift */; };
+		E93B3B31211E835A004CBF13 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93B3B2F211E835A004CBF13 /* Layout.swift */; };
+		E93B3B32211E835A004CBF13 /* Callback.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93B3B30211E835A004CBF13 /* Callback.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +35,8 @@
 		E93B3B21211E805E004CBF13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E93B3B2B211E8310004CBF13 /* FileStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileStorage.swift; sourceTree = "<group>"; };
 		E93B3B2C211E8310004CBF13 /* UserDefaultsStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsStorage.swift; sourceTree = "<group>"; };
+		E93B3B2F211E835A004CBF13 /* Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
+		E93B3B30211E835A004CBF13 /* Callback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Callback.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +80,9 @@
 			isa = PBXGroup;
 			children = (
 				E93B3B14211E805E004CBF13 /* EpicappToolkit.h */,
+				E93B3B30211E835A004CBF13 /* Callback.swift */,
 				E93B3B2B211E8310004CBF13 /* FileStorage.swift */,
+				E93B3B2F211E835A004CBF13 /* Layout.swift */,
 				E93B3B2C211E8310004CBF13 /* UserDefaultsStorage.swift */,
 				E93B3B15211E805E004CBF13 /* Info.plist */,
 			);
@@ -203,6 +209,8 @@
 			files = (
 				E93B3B2E211E8310004CBF13 /* UserDefaultsStorage.swift in Sources */,
 				E93B3B2D211E8310004CBF13 /* FileStorage.swift in Sources */,
+				E93B3B32211E835A004CBF13 /* Callback.swift in Sources */,
+				E93B3B31211E835A004CBF13 /* Layout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
