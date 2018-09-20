@@ -34,7 +34,7 @@ public class UserDefaultsStorage {
     
     public class func remove(value: String, fromList: String) {
         var list = self.get(list: fromList)
-        guard let index = list.firstIndex(where: { $0 == value }) else {
+        guard let index = list.index(of: value) else {
             return
         }
         list.remove(at: index)

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'EpicappToolkit'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'Useful Tools'
 
   s.description      = <<-DESC
@@ -12,7 +12,7 @@ EpicappToolkit is a collection of useful classes for every iOS project
   s.author           = { 'Vladimir' => 'bobah1991@gmail.com' }
   s.source           = { :git => 'https://github.com/elisar4/EpicappToolkit.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '9.0'
   s.source_files = 'EpicappToolkit/*.swift'
 
 end
