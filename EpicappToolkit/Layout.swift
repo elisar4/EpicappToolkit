@@ -46,44 +46,74 @@ public extension UIView {
         return heightAnchor
     }
     
-    public func right(to: NSLayoutAnchor<NSLayoutXAxisAnchor>, offset: CGFloat = 0.0) {
-        right.constraint(equalTo: to, constant: offset).isActive = true
+    @discardableResult
+    public func right(to: NSLayoutAnchor<NSLayoutXAxisAnchor>, offset: CGFloat = 0.0) -> NSLayoutConstraint {
+        let result = right.constraint(equalTo: to, constant: offset)
+        result.isActive = true
+        return result
     }
     
-    public func left(to: NSLayoutAnchor<NSLayoutXAxisAnchor>, offset: CGFloat = 0.0) {
-        left.constraint(equalTo: to, constant: offset).isActive = true
+    @discardableResult
+    public func left(to: NSLayoutAnchor<NSLayoutXAxisAnchor>, offset: CGFloat = 0.0) -> NSLayoutConstraint {
+        let result = left.constraint(equalTo: to, constant: offset)
+        result.isActive = true
+        return result
     }
     
-    public func top(to: NSLayoutAnchor<NSLayoutYAxisAnchor>, offset: CGFloat = 0.0) {
-        top.constraint(equalTo: to, constant: offset).isActive = true
+    @discardableResult
+    public func top(to: NSLayoutAnchor<NSLayoutYAxisAnchor>, offset: CGFloat = 0.0) -> NSLayoutConstraint {
+        let result = top.constraint(equalTo: to, constant: offset)
+        result.isActive = true
+        return result
     }
     
-    public func bottom(to: NSLayoutAnchor<NSLayoutYAxisAnchor>, offset: CGFloat = 0.0) {
-        bottom.constraint(equalTo: to, constant: offset).isActive = true
+    @discardableResult
+    public func bottom(to: NSLayoutAnchor<NSLayoutYAxisAnchor>, offset: CGFloat = 0.0) -> NSLayoutConstraint {
+        let result = bottom.constraint(equalTo: to, constant: offset)
+        result.isActive = true
+        return result
     }
     
-    public func centerX(to: NSLayoutAnchor<NSLayoutXAxisAnchor>, offset: CGFloat = 0.0) {
-        centerX.constraint(equalTo: to, constant: offset).isActive = true
+    @discardableResult
+    public func centerX(to: NSLayoutAnchor<NSLayoutXAxisAnchor>, offset: CGFloat = 0.0) -> NSLayoutConstraint {
+        let result = centerX.constraint(equalTo: to, constant: offset)
+        result.isActive = true
+        return result
     }
     
-    public func centerY(to: NSLayoutAnchor<NSLayoutYAxisAnchor>, offset: CGFloat = 0.0) {
-        centerY.constraint(equalTo: to, constant: offset).isActive = true
+    @discardableResult
+    public func centerY(to: NSLayoutAnchor<NSLayoutYAxisAnchor>, offset: CGFloat = 0.0) -> NSLayoutConstraint {
+        let result = centerY.constraint(equalTo: to, constant: offset)
+        result.isActive = true
+        return result
     }
     
-    public func width(to: NSLayoutAnchor<NSLayoutDimension>, offset: CGFloat = 0.0) {
-        a_width.constraint(equalTo: to, constant: offset).isActive = true
+    @discardableResult
+    public func width(to: NSLayoutAnchor<NSLayoutDimension>, offset: CGFloat = 0.0) -> NSLayoutConstraint {
+        let result = a_width.constraint(equalTo: to, constant: offset)
+        result.isActive = true
+        return result
     }
     
-    public func width(to: CGFloat) {
-        a_width.constraint(equalToConstant: to).isActive = true
+    @discardableResult
+    public func width(to: CGFloat) -> NSLayoutConstraint {
+        let result = a_width.constraint(equalToConstant: to)
+        result.isActive = true
+        return result
     }
     
-    public func height(to: NSLayoutAnchor<NSLayoutDimension>, offset: CGFloat = 0.0) {
-        a_height.constraint(equalTo: to, constant: offset).isActive = true
+    @discardableResult
+    public func height(to: NSLayoutAnchor<NSLayoutDimension>, offset: CGFloat = 0.0) -> NSLayoutConstraint {
+        let result = a_height.constraint(equalTo: to, constant: offset)
+        result.isActive = true
+        return result
     }
     
-    public func height(to: CGFloat) {
-        a_height.constraint(equalToConstant: to).isActive = true
+    @discardableResult
+    public func height(to: CGFloat) -> NSLayoutConstraint {
+        let result = a_height.constraint(equalToConstant: to)
+        result.isActive = true
+        return result
     }
     
     public func snap(to: UIView, offset: CGFloat = 0.0) {
