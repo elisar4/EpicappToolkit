@@ -9,18 +9,21 @@ public class UserDefaultsStorage {
         return get(list: containedIn).contains(value)
     }
     
-    public class func add(value: String, toList: String, cap: Int = -1) {
+    @discardableResult
+    public class func add(value: String, toList: String, cap: Int = -1) -> [String] {
         var list = self.get(list: toList)
         if list.contains(value) {
-            return
+            return []
         }
+        var removed: [String] = []
         list.append(value)
         if cap > 0 {
             while list.count > cap {
-                list.removeFirst()
+                removed.append(list.removeFirst())
             }
         }
         UserDefaults.standard.set(list, forKey: toList)
+        return removed
     }
     
     public class func get(list: String) -> [String] {
