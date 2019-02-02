@@ -32,6 +32,10 @@ public class FileStorage {
         }
     }
     
+    public static func get(path: String, to directory: Directory) -> URL {
+        return getURL(for: directory).appendingPathComponent(path, isDirectory: false)
+    }
+    
     
     /// Store an encodable struct to the specified directory on disk
     ///
