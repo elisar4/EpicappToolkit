@@ -58,6 +58,18 @@ public class FileStorage {
         }
     }
     
+    public static func storeData(_ object: Data, to directory: Directory, as fileName: String) {
+        let url = getURL(for: directory).appendingPathComponent(fileName, isDirectory: false)
+        do {
+            if FileManager.default.fileExists(atPath: url.path) {
+                try FileManager.default.removeItem(at: url)
+            }
+            FileManager.default.createFile(atPath: url.path, contents: object, attributes: nil)
+        } catch {
+            fatalError(error.localizedDescription)
+        }
+    }
+    
     /// Retrieve and convert a struct from a file on disk
     ///
     /// - Parameters:
