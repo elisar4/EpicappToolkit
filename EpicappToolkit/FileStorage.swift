@@ -81,6 +81,26 @@ public class FileStorage {
         }
     }
     
+    public static func retrieveIfExists<T: Decodable>(_ fileName: String, from directory: Directory, as type: T.Type) -> T? {
+        let url = getURL(for: directory).appendingPathComponent(fileName, isDirectory: false)
+        
+        if !FileManager.default.fileExists(atPath: url.path) {
+            return nil
+        }
+        
+        if let data = FileManager.default.contents(atPath: url.path) {
+            let decoder = JSONDecoder()
+            do {
+                let model = try decoder.decode(type, from: data)
+                return model
+            } catch {
+                return nil
+            }
+        } else {
+            return nil
+        }
+    }
+    
     /// Remove all files at specified directory
     public static func clear(_ directory: Directory) {
         let url = getURL(for: directory)
