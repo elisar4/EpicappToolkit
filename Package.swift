@@ -5,6 +5,9 @@ import PackageDescription
 
 let package = Package(
     name: "EpicappToolkit",
+    platforms: [
+        .iOS(.v9)
+    ],
     products: [
         .library(
             name: "EpicappToolkit",
